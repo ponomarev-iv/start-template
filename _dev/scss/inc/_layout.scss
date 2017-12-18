@@ -14,8 +14,13 @@ body {
 }
 .footer {
     flex: 0 0 auto;
-    //TODO: temp
+    //TODO: temp example
     padding: 20px 0;
     background-color: green;
     color: #fff;
+
+    //TODO: example respond mixin
+    @include respondTo(tablet){
+        padding: 16px 0;
+    }
 }

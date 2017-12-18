@@ -4,8 +4,11 @@
 
 @import "inc/layout";
 
-//test
+//TODO: example
 h1{
     color: pink;
-    font-size: 3rem;
+    //font-size: 3rem;
+
+    //TODO: example fluid-type mixin
+    @include fluid-type(font-size, 320px, 1200px, 16px, 48px);
 }
