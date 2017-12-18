@@ -1,0 +1,11 @@
+@import "assets/reset";
+@import "assets/media-mixin";
+@import "assets/text-mixin";
+
+@import "inc/layout";
+
+//test
+h1{
+    color: pink;
+    font-size: 3rem;
+}

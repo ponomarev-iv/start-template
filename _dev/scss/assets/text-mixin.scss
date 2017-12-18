@@ -1,0 +1,31 @@
+//источник https://www.smashingmagazine.com/2016/05/fluid-typography/
+//заменил в @media для $max-vw min-width на max-width т.к. тут не mobile first
+//чтобы на экранах меньше $min-vw оставлось переданное значение $min-value нужно расскомментить @media (max-width: $min-vw - 1)
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+    @each $property in $properties {
+        #{$property}: $max-value;
+    }
+
+    @media (min-width: $min-vw) {
+        @each $property in $properties {
+            #{$property}: calc(#{$min-value} - -#{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+        }
+    }
+
+    @media (max-width: $min-vw - 1) {
+        @each $property in $properties {
+            #{$property}: $min-value;
+        }
+    }
+
+    @media (min-width: $max-vw) {
+        @each $property in $properties {
+            #{$property}: $max-value;
+        }
+    }
+}
