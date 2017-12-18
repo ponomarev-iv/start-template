@@ -12,3 +12,9 @@ h1{
     //TODO: example fluid-type mixin
     @include fluid-type(font-size, 320px, 1200px, 16px, 48px);
 }
+
+.icon{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+}

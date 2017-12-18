@@ -1,18 +1,18 @@
 'use strict';
 
-var gulp = require('gulp'),
-    watch = require('gulp-watch'),
-    prefixer = require('gulp-autoprefixer'),
-    uglify = require('gulp-uglify'),
-    sass = require('gulp-sass'),
-    csso = require('gulp-csso'),
-    imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
-    newer = require('gulp-newer'),
-    size = require('gulp-size'),
-    browserSync = require("browser-sync"),
-    pug = require('gulp-pug'),
-    reload = browserSync.reload;
+const   gulp = require('gulp'),
+        watch = require('gulp-watch'),
+        prefixer = require('gulp-autoprefixer'),
+        uglify = require('gulp-uglify'),
+        sass = require('gulp-sass'),
+        csso = require('gulp-csso'),
+        imagemin = require('gulp-imagemin'),
+        pngquant = require('imagemin-pngquant'),
+        newer = require('gulp-newer'),
+        size = require('gulp-size'),
+        browserSync = require("browser-sync"),
+        pug = require('gulp-pug'),
+        reload = browserSync.reload;
 
 var path = {
     build: {
