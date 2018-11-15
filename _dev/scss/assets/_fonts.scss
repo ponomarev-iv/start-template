@@ -1,0 +1,27 @@
+$font-dir: '../fonts/';
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url($font-dir + 'Roboto-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url($font-dir + 'Roboto-Medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoitalic';
+    src: url($font-dir + 'Roboto-Italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$ff-base: robotoregular, sans-serif;
+$ff-mid: robotomedium, sans-serif;
+$ff-italic: robotoitalic, sans-serif;
