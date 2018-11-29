@@ -1,6 +1,19 @@
 html,
 body {
     height: 100%;
+    margin: 0;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    line-height: 1;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
 }
 
 .page-wrap {
@@ -16,11 +29,22 @@ body {
     flex: 0 0 auto;
     //TODO: temp example
     padding: 20px 0;
-    background-color: green;
+    background-color: black;
     color: #fff;
 
     //TODO: example respond mixin
     @include respondTo(tablet){
         padding: 16px 0;
     }
+}
+
+//empty link
+a[href^="http"]:empty::before{
+    content: attr(href);
+}
+
+//style for simple link
+a[href]:not([class]){
+    color: #008000;
+    text-decoration: underline;
 }
